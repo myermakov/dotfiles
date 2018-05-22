@@ -1,0 +1,9 @@
+tmux
+ambiguous option mouse
+
+vim
+line   29: E518: Unknown option: termguicolors
+line  107: E474: Invalid argument: display=truncate
+
+E185: Cannot find color scheme 'base16-seti'
+
