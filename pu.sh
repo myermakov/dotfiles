@@ -1,16 +1,28 @@
 #! /bin/sh
-if [ ! -f ~/.tmux.conf ]; then
-  ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-else
-  echo "tmux conf file exists"
+
+mkdir ~/dotfiles/localdots
+
+if [ -f ~/.tmux.conf ]; then
+  echo "tmux conf file exists, replacing"
+  mv ~/.tmux.conf ~/dotfiles/localdots
 fi
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 
-if [ ! -f ~/.vimrc ]; then
-  ln -s ~/dotfiles/.vimrc ~/.vimrc
-else
-  echo "vimrc file exists"
+if [ -f ~/.vimrc ]; then
+  echo "vimrc file exists, replacing"
+  mv ~/.vimrc ~/dotfiles/localdots/
 fi
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+
+
+if [ -f ~/.bashrc ]; then
+  echo "vimrc file exists, replacing"
+  mv ~/.bashrc ~/dotfiles/localdots/
+fi
+ln -s ~/dotfiles/.bashrc ~/.bashrc
+
+
 
 
 # TODO: bash and input resource files
