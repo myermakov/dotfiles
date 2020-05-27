@@ -7,11 +7,14 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' 
 
-Plugin 'tpope/vim-fugitive' 
+"Plugin 'tpope/vim-fugitive' 
 Plugin 'surround.vim' 
 "Plugin 'mattn/emmet-vim'
+"Plugin 'chriskempson/base16-vim'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Smooth-Scroll'
-Plugin 'nathanaelkane/vim-indent-guides'
+"Plugin 'nathanaelkane/vim-indent-guides'
 
 call vundle#end()
 
@@ -21,7 +24,12 @@ let base16colorspace=16 "access colors present in 256 colorspace
 
 "colors
 syntax enable
+"colorscheme base16-seti
 colorscheme default
+"set termguicolors
+"} 
+
+
 
 
 "tab settings
