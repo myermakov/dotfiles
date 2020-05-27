@@ -9,10 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive' 
 Plugin 'surround.vim' 
-Plugin 'mattn/emmet-vim'
-Plugin 'chriskempson/base16-vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'mattn/emmet-vim'
 Plugin 'Smooth-Scroll'
 Plugin 'nathanaelkane/vim-indent-guides'
 
@@ -20,18 +17,14 @@ call vundle#end()
 
 filetype plugin indent on
 
-"let base16colorspace=256 "access colors present in 256 colorspace
 let base16colorspace=16 "access colors present in 256 colorspace
 
-" colors {
+"colors
 syntax enable
-colorscheme base16-seti
-"set termguicolors
-"} 
+colorscheme default
 
 
-
-
+"tab settings
 set tabstop=8 "max width of a tab char in spaces
 set softtabstop=0 "mix of tabs and spaces, not cool
 set expandtab "makes \t expand to spaces
@@ -45,16 +38,12 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_color_change_percent = 2
 let g:indent_guides_enable_on_vim_startup = 1
 
-"vim-indent-guides
-let g:airline_theme = 'minimalist'
 
 "emmet-vim
 let g:user_emmet_mode = 'i'
 let g:user_emmet_install_global = 0
 autocmd FileType html,htmldjango,css EmmetInstall
 "let g:user_leader_key = '<C-Tab>'
-
-
 
 
 

@@ -1,0 +1,16 @@
+getfacl
+
+newgrp = log into a new group?
+sg = execute a command as a different group id
+groupmod = modify a group definition
+chown or chgrp  = change individual or group ownership
+
+chcon -Rt httpd_sys_content_t /srv/app
+getenforce
+setsebool -P httpd_can_network_connect on
+
+
+# Fedora system upgrade
+dnf upgrade --refresh
+dnf install dnf-plugin-system-upgrade
+dnf system-upgrade download --refresh --releasever=31
